@@ -16,8 +16,8 @@ int main() {
     char pdfname[54];
     char jpgname[54];
 
-    printf("Masukkan nama file (tanpa ekstensi/format): ");
-    scanf("%s", filename);
+    printf("Masukkan nama file (tanpa ekstensi/format): "); //Input nama file
+    scanf("%s", filename); //Membaca file
 
     strcpy(pdfname, filename);
     strcpy(jpgname, filename);
@@ -25,13 +25,13 @@ int main() {
     strcat(jpgname, ".jpg");
 
     if (file = fopen(pdfname, "r")) {
-        printf("File pdf");
+        printf("Format file %s berupa pdf", filename);
     }
     else if (file = fopen(jpgname, "r")) {
-        printf("File jpg");
+        printf("Format file %s berupa jpg", filename);
     }
     else {
-        printf("File unidentified");
+        printf("Format file %s unidentified", filename);
     }
 
     return 0;
