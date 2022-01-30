@@ -4,6 +4,7 @@ NIM    : 18320007
 Tanggal: 29 Januari 2022
 */
 
+// Input library
 #include <stdio.h>
 #include <stdlib.h>
 #include <string.h>
