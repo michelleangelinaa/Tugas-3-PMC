@@ -15,7 +15,7 @@ Edit 1: 30 Januari 2022, 20:43 WIB
 
 int main () {
     /* KAMUS */
-    int filenamemax = 100;
+    int filenamemax = 50;
     int maxbyte = 5;
     FILE *file;
     char filename [filenamemax];
