@@ -26,9 +26,10 @@ int main() {
         scanf("%d", &mhs[i].nim);
         printf("Persentase kehadiran (tanpa tanda persen): ");
         scanf("%d", &mhs[i].presence);
+        printf("\n");
     }
 
-    printf("\n--------------------------------------------------\n");
+    printf("--------------------------------------------------\n");
     printf("Mahasiswa dengan kehadiran kurang dari 80%: \n");
 
     for (i = 0; i<n; i++) {
@@ -38,7 +39,7 @@ int main() {
         }
 
     }
-    
-    return 0;
 
+
+    return 0;
 }
