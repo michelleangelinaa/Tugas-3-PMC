@@ -39,17 +39,15 @@ void addmhs(void) {
 void tampilan(void) {
     int i;
     for (i=0; i<urutan; i++) {
-        if (mhs[urutan].presence < 80 && mhs[urutan].presence > 0) {
+        if (mhs[urutan].presence < 80) {
             printf("Mahasiswa dengan kehadiran di bawah 80%: \n");
             printf("Nama: %s \n", mhs[i].nama);
             printf("NIM: %i\n", mhs[i].nim);
             printf("---------------------------\n");
         }
-        else if (mhs[urutan].presence >= 80 && mhs[urutan].presence <= 100) {
-            printf("\n");
         }
     }
-}
+
 
 int main() {
     char c;
@@ -63,11 +61,11 @@ int main() {
 
         if (c == 'a') {
             addmhs();
-            getchar();
+            break;
         }
         else if (c == 'b') {
             tampilan();
-            getchar();
+            break;
         }
         else {
             printf("masuk ke else");
