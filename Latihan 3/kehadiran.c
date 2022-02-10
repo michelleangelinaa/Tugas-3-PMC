@@ -8,7 +8,7 @@ Tanggal: Kamis, 10 Februari 2022
 #include <stdlib.h>
 
 struct kehadiran {
-    char nama[50];
+    char nama[100];
     int nim;
     int presence;
 };
@@ -18,10 +18,7 @@ int main() {
     printf("Masukkan jumlah mahasiswa: ");
     scanf("%d", &n);
 
-    if (n > 50) {
-        printf("Jumlah mahasiswa melewati batas kuota kelas.");
-    }
-    else if ((n < 50) && (n > 0)) {
+    if (n > 0) {
         struct kehadiran mhs[n];
         int i;
         for (i = 0; i<n; i++) {
