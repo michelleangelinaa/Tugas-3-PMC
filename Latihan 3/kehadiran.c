@@ -17,29 +17,38 @@ int main() {
     int n;
     printf("Masukkan jumlah mahasiswa: ");
     scanf("%d", &n);
-    struct kehadiran mhs[n];
-    int i;
-    for (i = 0; i<n; i++) {
-        printf("Nama mahasiswa: ");
-        scanf("%s", &mhs[i].nama);
-        printf("NIM mahasiswa: ");
-        scanf("%d", &mhs[i].nim);
-        printf("Persentase kehadiran (tanpa tanda persen): ");
-        scanf("%d", &mhs[i].presence);
-        printf("\n");
+
+    if (n > 50) {
+        printf("Jumlah mahasiswa melewati batas kuota kelas.");
     }
+    else if ((n < 50) && (n > 0)) {
+        struct kehadiran mhs[n];
+        int i;
+        for (i = 0; i<n; i++) {
+            printf("Nama mahasiswa: ");
+            scanf("%s", &mhs[i].nama);
+            printf("NIM mahasiswa: ");
+            scanf("%d", &mhs[i].nim);
+            printf("Persentase kehadiran (tanpa tanda persen): ");
+            scanf("%d", &mhs[i].presence);
+            printf("\n");
+        }
 
-    printf("--------------------------------------------------\n");
-    printf("Mahasiswa dengan kehadiran kurang dari 80%: \n");
+        printf("--------------------------------------------------\n");
+        printf("Mahasiswa dengan kehadiran kurang dari 80%: \n");
 
-    for (i = 0; i<n; i++) {
-        if (mhs[i].presence < 80) {
-            printf("%s ", mhs[i].nama);
-            printf("%d\n", mhs[i].nim);
+        for (i = 0; i<n; i++) {
+            if (mhs[i].presence < 80) {
+                printf("%s ", mhs[i].nama);
+                printf("%d\n", mhs[i].nim);
+            }
         }
 
     }
 
+    else {
+        printf("Angka tidak valid.");
+    }
 
     return 0;
 }
